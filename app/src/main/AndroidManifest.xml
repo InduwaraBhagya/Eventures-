@@ -24,10 +24,10 @@
             </intent-filter>
         </activity>
 
-        <!--activity
-            android:name=".AdminSignupActivity"
+        <activity
+            android:name=".SignupActivity"
             android:exported="true"
-            tools:ignore="MissingClass" /-->
+            tools:ignore="MissingClass" />
 
     </application>
 
