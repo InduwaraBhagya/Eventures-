@@ -29,7 +29,7 @@ class SignupActivity : AppCompatActivity() {
             if (name.isEmpty() || email.isEmpty() || password.isEmpty()) {
                 Toast.makeText(this, "Please complete all fields", Toast.LENGTH_SHORT).show()
             } else {
-                // Save user data in SharedPreferences
+
                 val sharedPref = getSharedPreferences("UserData", Context.MODE_PRIVATE)
                 val editor = sharedPref.edit()
                 editor.putString("email", email)

@@ -7,7 +7,7 @@
     android:background="#FAFAFA"
     android:padding="24dp">
 
-    <!-- App Logo -->
+
     <ImageView
         android:id="@+id/ivLoginLogo"
         android:layout_width="100dp"
@@ -18,7 +18,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="32dp" />
 
-    <!-- Login Form Container -->
     <LinearLayout
         android:id="@+id/loginForm"
         android:layout_width="match_parent"
