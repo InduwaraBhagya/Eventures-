@@ -11,7 +11,6 @@ import com.example.mobile_cw.R
 
 class LoginActivity : AppCompatActivity() {
 
-    // Dummy user data (email and password)
     private val dummyEmail = "bhagya@gmail.com"
     private val dummyPassword = "123456"
 
@@ -32,7 +31,7 @@ class LoginActivity : AppCompatActivity() {
                 Toast.makeText(this, "Please fill in both fields", Toast.LENGTH_SHORT).show()
             } else if (email == dummyEmail && password == dummyPassword) {
                 Toast.makeText(this, "Login successful!", Toast.LENGTH_SHORT).show()
-                // Redirect to Home or Dashboard activity
+
                 //val intent = Intent(this, HomeActivity::class.java) // Replace with your actual Home Activity
                 //startActivity(intent)
                 finish()
@@ -41,9 +40,9 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
-        //signupText.setOnClickListener {
-           // val intent = Intent(this, AdminSignupActivity::class.java)
-           // startActivity(intent)
-       // }
+        signupText.setOnClickListener {
+           val intent = Intent(this, SignupActivity::class.java)
+           startActivity(intent)
+        }
     }
 }
