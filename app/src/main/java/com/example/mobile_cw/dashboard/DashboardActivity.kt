@@ -41,11 +41,11 @@ class DashboardActivity : AppCompatActivity() {
         // Setup RecyclerView with event list
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         val events = listOf(
-            Event("Music Concert", R.drawable.ic_music, null),
-            Event("Art Exhibition", R.drawable.ic_art, null),
+            Event("Music Concert", R.drawable.baseline_headphones_24, null),
+            Event("Art Exhibition", R.drawable.baseline_color_lens_24, null),
             Event("Tech Conference", R.drawable.ic_tech, null),
             Event("Food Festival", R.drawable.baseline_fastfood_24, null),
-            Event("sport ", R.drawable.ic_sport1, null)
+            Event("sport ", R.drawable.baseline_sports_basketball_24, null)
         )
 
         eventAdapter = EventAdapter(events) { event ->
