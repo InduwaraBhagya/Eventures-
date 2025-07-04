@@ -11,7 +11,7 @@ class EventsDashboard : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_music_event)
+        setContentView(R.layout.activity_event)
 
         val toolbar = findViewById<Toolbar>(R.id.music_toolbar)
         setSupportActionBar(toolbar)
