@@ -1,9 +1,11 @@
-package com.example.eventuresapp
+package com.example.mobile_cw
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.mobile_cw.Event
+import com.example.mobile_cw.EventAdapter
 import com.example.mobile_cw.R
 
 class HomeActivity : AppCompatActivity() {

@@ -1,4 +1,4 @@
-package com.example.eventuresapp
+package com.example.mobile_cw
 
 data class Event(
     val title: String,
