@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.mobile_cw.R
 import com.example.mobile_cw.dashboard.adapter.EventAdapter
 import com.example.mobile_cw.dashboard.model.Event
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class DashboardActivity : AppCompatActivity() {
     private lateinit var drawerLayout: DrawerLayout
@@ -43,7 +44,7 @@ class DashboardActivity : AppCompatActivity() {
             Event("Music Concert", R.drawable.ic_music, null),
             Event("Art Exhibition", R.drawable.ic_art, null),
             Event("Tech Conference", R.drawable.ic_tech, null),
-            Event("Food Festival", R.drawable.ic_food, null),
+            Event("Food Festival", R.drawable.baseline_fastfood_24, null),
             Event("sport ", R.drawable.ic_sport1, null)
         )
 
@@ -57,5 +58,24 @@ class DashboardActivity : AppCompatActivity() {
 
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = eventAdapter
+
+        val bottomNavigation = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        bottomNavigation.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.navigation_home -> {
+                    Toast.makeText(this, "Home selected", Toast.LENGTH_SHORT).show()
+                    true
+                }
+                R.id.navigation_search -> {
+                    Toast.makeText(this, "Search selected", Toast.LENGTH_SHORT).show()
+                    true
+                }
+                R.id.navigation_profile -> {
+                    Toast.makeText(this, "Profile selected", Toast.LENGTH_SHORT).show()
+                    true
+                }
+                else -> false
+            }
+        }
     }
 }
