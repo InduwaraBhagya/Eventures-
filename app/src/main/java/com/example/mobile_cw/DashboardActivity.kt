@@ -1,4 +1,4 @@
-package com.example.mobile_cw.dashboard
+package com.example.mobile_cw
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,9 +9,8 @@ import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.mobile_cw.R
-import com.example.mobile_cw.dashboard.adapter.EventAdapter
-import com.example.mobile_cw.dashboard.model.Event
+import com.example.mobile_cw.adapter.EventAdapter
+import com.example.mobile_cw.model.Event
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class DashboardActivity : AppCompatActivity() {

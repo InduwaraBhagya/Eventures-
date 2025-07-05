@@ -1,4 +1,4 @@
-package com.example.mobile_cw.dashboard.model
+package com.example.mobile_cw.model
 
 data class Event(
     val title: String,
