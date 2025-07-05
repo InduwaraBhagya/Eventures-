@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E6E6FA"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp">
+
+    <!-- Thank You Text -->
+    <TextView
+        android:id="@+id/thankYouText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="✅ Thank you for your feedback!"
+        android:textColor="#4B0082"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Event Name -->
+    <TextView
+        android:id="@+id/confirmedEventName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Event Name"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:layout_marginBottom="10dp" />
+
+    <!-- Event Image -->
+    <ImageView
+        android:id="@+id/confirmedEventImage"
+        android:layout_width="280dp"
+        android:layout_height="180dp"
+        android:layout_marginBottom="16dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/carnival" />
+
+    <!-- Rating Display -->
+    <TextView
+        android:id="@+id/confirmedRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Rating: 4 ★"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/reviewAnotherBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Review Another Event"
+        android:textColor="#000000"
+        android:backgroundTint="#E8C7F9"
+        android:layout_marginTop="24dp"
+        android:elevation="2dp" />
+
+
+</LinearLayout>

@@ -1,61 +1,61 @@
 package com.example.mobile_cw
 
-import android.content.res.ColorStateList
-import android.graphics.Color
+import android.content.Intent
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.widget.*
+import android.widget.Button
+import android.widget.EditText
+import android.widget.ImageView
+import android.widget.LinearLayout
+import android.widget.RatingBar
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class RateReviewActivity : AppCompatActivity() {
 
-    data class AttendedEvent(
-        val title: String,
-        val imageResId: Int // Drawable resource ID
-    )
+    // Event data class
+    data class Event(val title: String, val imageResId: Int)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.rate_review_activity)
 
-        val eventReviewList = findViewById<LinearLayout>(R.id.eventReviewList)
+        // Parent layout where we'll dynamically add event cards
+        val reviewListLayout = findViewById<LinearLayout>(R.id.reviewList)
 
-        // Example list of attended events with sample images
+        // Sample attended events
         val attendedEvents = listOf(
-            AttendedEvent("Music Fest 2025", R.drawable.music_fest),
-            AttendedEvent("Food Carnival", R.drawable.food_carnival),
-            AttendedEvent("Tech Expo", R.drawable.tech_expo)
+            Event("Music Fest 2025", R.drawable.music_fest),
+            Event("Food Carnival", R.drawable.food_carnival),
+            Event("Tech Expo", R.drawable.tech_expo)
         )
 
+        // Dynamically add review items
         for (event in attendedEvents) {
-            val eventView = LayoutInflater.from(this).inflate(R.layout.event_review_item, null)
+            // Inflate event_review_item.xml layout for each event
+            val eventView = layoutInflater.inflate(R.layout.event_review_item, null)
 
-            val titleText = eventView.findViewById<TextView>(R.id.eventTitle)
-            val imageView = eventView.findViewById<ImageView>(R.id.eventImage)
+            // Get views from inflated layout
+            val eventTitle = eventView.findViewById<TextView>(R.id.eventTitle)
+            val eventImage = eventView.findViewById<ImageView>(R.id.eventImage)
             val ratingBar = eventView.findViewById<RatingBar>(R.id.ratingBar)
-            // Set yellow color for selected stars (progress)
-            val yellow = Color.parseColor("#FFD700")
-            ratingBar.progressTintList = ColorStateList.valueOf(yellow)
-            ratingBar.secondaryProgressTintList = ColorStateList.valueOf(yellow)
-            ratingBar.thumbTintList = ColorStateList.valueOf(yellow)
             val reviewInput = eventView.findViewById<EditText>(R.id.reviewInput)
             val submitButton = eventView.findViewById<Button>(R.id.submitReviewBtn)
 
-            titleText.text = event.title
-            imageView.setImageResource(event.imageResId)
+            // Set event data
+            eventTitle.text = event.title
+            eventImage.setImageResource(event.imageResId)
 
+            // Handle submit
             submitButton.setOnClickListener {
-                val rating = ratingBar.rating
-                val review = reviewInput.text.toString()
-
-                Toast.makeText(
-                    this,
-                    "Thanks for rating '${event.title}' $rating★\nReview: $review",
-                    Toast.LENGTH_SHORT
-                ).show()
+                val intent = Intent(this, ReviewConfirmationActivity::class.java)
+                intent.putExtra("eventName", event.title)
+                intent.putExtra("ratingValue", ratingBar.rating)
+                intent.putExtra("eventImage", event.imageResId)
+                startActivity(intent)
             }
 
-            eventReviewList.addView(eventView)
+            // Add to the review list
+            reviewListLayout.addView(eventView)
         }
     }
 }
