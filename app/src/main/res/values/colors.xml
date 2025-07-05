@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#9C27B0</color>          <!-- Vibrant Purple -->
+    <color name="colorPrimaryVariant">#7B1FA2</color>   <!-- Dark Purple for status/navigation -->
+    <color name="colorSecondary">#E1BEE7</color>        <!-- Soft lavender -->
+    <color name="colorOnPrimary">#FFFFFF</color>        <!-- White text on purple -->
+    <color name="colorBackground">#FFFFFF</color>       <!-- White app background -->
+    <color name="colorSurface">#F3E5F5</color>          <!-- Light purple cards -->
+    <color name="colorOnBackground">#212121</color>     <!-- Primary text -->
+    <color name="colorOnSurface">#212121</color>        <!-- Surface text -->
 </resources>

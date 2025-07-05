@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Mobile_CW</string>
+    <string name="event_icon">Event icon</string>
+    <string name="event_title">Event title</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>
