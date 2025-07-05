@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.mobile_cw.R
 import com.example.mobile_cw.dashboard.adapter.EventAdapter
 import com.example.mobile_cw.dashboard.model.Event
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class DashboardActivity : AppCompatActivity() {
     private lateinit var drawerLayout: DrawerLayout
@@ -40,11 +41,12 @@ class DashboardActivity : AppCompatActivity() {
         // Setup RecyclerView with event list
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         val events = listOf(
-            Event("Music Concert", R.drawable.ic_music, null),
-            Event("Art Exhibition", R.drawable.ic_art, null),
-            Event("Tech Conference", R.drawable.ic_tech, null),
-            Event("Food Festival", R.drawable.ic_food, null),
-            Event("sport ", R.drawable.ic_sport1, null)
+            Event("Music Concert", R.drawable.baseline_headphones_24, EventsDashboard::class.java),
+            Event("Food Festival", R.drawable.baseline_fastfood_24, EventsDashboard::class.java),
+            Event("Sport competition", R.drawable.baseline_sports_basketball_24, EventsDashboard::class.java),
+            Event("Art Exhibition", R.drawable.baseline_color_lens_24, EventsDashboard::class.java),
+            Event("Tech Conference", R.drawable.baseline_computer_24, EventsDashboard::class.java),
+
         )
 
         eventAdapter = EventAdapter(events) { event ->
@@ -57,5 +59,27 @@ class DashboardActivity : AppCompatActivity() {
 
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = eventAdapter
+
+        // Setup Bottom Navigation
+        val bottomNavigation = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        bottomNavigation.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.navigation_home -> {
+                    Toast.makeText(this, "Home selected", Toast.LENGTH_SHORT).show()
+                    true
+                }
+                R.id.navigation_search -> {
+                    Toast.makeText(this, "Search selected", Toast.LENGTH_SHORT).show()
+                    true
+                }
+                R.id.navigation_profile -> {
+                    Toast.makeText(this, "Profile selected", Toast.LENGTH_SHORT).show()
+                    true
+                }
+                else -> false
+            }
+        }
+
+
     }
 }

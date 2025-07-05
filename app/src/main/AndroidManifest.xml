@@ -22,7 +22,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".dashboard.MusicEventActivity" />
+        <activity android:name=".dashboard.EventsDashboard" />
 
         <activity
             android:name=".MainActivity"
