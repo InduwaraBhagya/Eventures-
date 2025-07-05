@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- App Theme -->
+    <style name="Theme.YourAppName" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Your other theme settings -->
+        <item name="colorPrimary">#6200EE</item>
+        <item name="colorPrimaryVariant">#3700B3</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+    </style>
+
+    <!-- ✅ Yellow Star Style (MUST be inside <resources>) -->
+    <style name="YellowStarStyle" parent="Widget.AppCompat.RatingBar">
+        <item name="colorControlActivated">#FFD700</item> <!-- Yellow stars -->
+        <item name="colorControlNormal">#CCCCCC</item>    <!-- Gray empty stars -->
+    </style>
+
+</resources>

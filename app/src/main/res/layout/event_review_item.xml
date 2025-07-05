@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:padding="16dp"
+    android:layout_marginBottom="16dp"
+    android:elevation="2dp">
+
+    <!-- Event Title -->
+    <TextView
+        android:id="@+id/eventTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Event Name"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:paddingBottom="8dp" />
+
+    <!-- Event Image -->
+    <ImageView
+        android:id="@+id/eventImage"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/music_fest"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Yellow Stars -->
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="1"
+        android:isIndicator="false"
+        android:layout_marginBottom="12dp" />
+
+
+
+
+    <!-- Review Input -->
+    <EditText
+        android:id="@+id/reviewInput"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:hint="Write your review here..."
+        android:textColorHint="#000000"
+        android:textColor="#000000"
+        android:background="@drawable/edittext_border"
+        android:padding="10dp"
+        android:gravity="top"
+        android:inputType="textMultiLine"
+        android:layout_marginBottom="12dp" />
+
+
+    <!-- Submit Button -->
+    <Button
+        android:id="@+id/submitReviewBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit Review"
+        android:textColor="#000000"
+        android:backgroundTint="#E8C7F9"
+        android:elevation="2dp" />
+</LinearLayout>
