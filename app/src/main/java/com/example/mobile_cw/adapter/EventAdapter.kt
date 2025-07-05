@@ -1,4 +1,4 @@
-package com.example.mobile_cw.dashboard.adapter
+package com.example.mobile_cw.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.mobile_cw.dashboard.model.Event
+import com.example.mobile_cw.model.Event
 import com.example.mobile_cw.R
 
 class EventAdapter(

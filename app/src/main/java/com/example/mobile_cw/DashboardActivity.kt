@@ -1,4 +1,4 @@
-package com.example.mobile_cw.dashboard
+package com.example.mobile_cw
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,9 +9,8 @@ import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.mobile_cw.R
-import com.example.mobile_cw.dashboard.adapter.EventAdapter
-import com.example.mobile_cw.dashboard.model.Event
+import com.example.mobile_cw.adapter.EventAdapter
+import com.example.mobile_cw.model.Event
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class DashboardActivity : AppCompatActivity() {
@@ -43,7 +42,7 @@ class DashboardActivity : AppCompatActivity() {
         val events = listOf(
             Event("Music Concert", R.drawable.baseline_headphones_24, null),
             Event("Art Exhibition", R.drawable.baseline_color_lens_24, null),
-            Event("Tech Conference", R.drawable.ic_tech, null),
+            Event("Tech Conference", R.drawable.baseline_computer_24, null),
             Event("Food Festival", R.drawable.baseline_fastfood_24, null),
             Event("sport ", R.drawable.baseline_sports_basketball_24, null)
         )
